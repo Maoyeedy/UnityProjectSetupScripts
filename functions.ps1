@@ -2,7 +2,9 @@ function Assert-AdminPrivileges {
     $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
     $isAdmin = $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
     if (-not $isAdmin) {
-        Write-Host "Please run the script with admin..." -ForegroundColor Yellow
+        Write-Host "`nConfiguring MergeRules requires admin privileges." -ForegroundColor Red
+        # Write-Host "`e[3mExample: Start-Process powershell.exe -Verb RunAs`e[23m" -ForegroundColor DarkGray
+        Write-BoxedCode "Start-Process powershell.exe -Verb RunAs"
         exit
     }
 }
