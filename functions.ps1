@@ -26,11 +26,19 @@ function Write-BoxedCode {
 }
 
 function Get-UnityVersion {
-    if (!(Test-Path ProjectSettings/ProjectVersion.txt)) {
-        Write-Error "ProjectSettings/ProjectVersion.txt not found"
-        return $null
+    $paths = @(
+        "./ProjectSettings/ProjectVersion.txt",
+        "../ProjectSettings/ProjectVersion.txt"
+    )
+
+    foreach ($path in $paths) {
+        if (Test-Path $path) {
+            return (Get-Content $path | Select-String "m_EditorVersion:").Line -replace '^m_EditorVersion:\s*'
+        }
     }
-    return (Get-Content ProjectSettings/ProjectVersion.txt | Select-String "m_EditorVersion:").Line -replace '^m_EditorVersion:\s*'
+
+    Write-Error "ProjectSettings/ProjectVersion.txt not found."
+    return $null
 }
 
 function Get-UnityEditorPath {
