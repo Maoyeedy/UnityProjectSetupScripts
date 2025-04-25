@@ -4,17 +4,17 @@ Make Unity Projects work better with Git.
 
 Currently for Windows only.
 
-<!-- add screenshot.png -->
-
 <!-- ![Screenshot](Public/carbon.png) -->
 ![Screenshot](Public/ScreenshotAlt.png)
 
-## What it does
+## What they do
 
-- `unityyamlmerge` mergetool added to `.git/config`, to be used with `.gitattributes`
-- Unity scene merges work better, with [mergerules](mergerules.txt) that ignore negligible differences.
-- `git pull` now uses rebase (cleaner history when pulling from master)
-- Submodules get automatically fetched when you `git pull/fetch`
+- Add `unityyamlmerge` mergetool added to `.git/config`, to be used with `.gitattributes`
+- Add [mergerules](mergerules.txt) to make `unityyamlmerge` ignore negligible differences. [(Source)](https://docs.unity3d.com/Manual/SmartMerge.html)
+- Make `git pull` uses rebase (for cleaner history when pulling from origin)
+- Make submodules also get fetched when you execute `git pull/fetch`
+
+(Details can be found in each `.ps1` scripts, you may also modify them to your liking.)
 
 ## Installation
 
@@ -24,7 +24,7 @@ Or clone the repository:
 ```powershell
 cd $UnityProjectRoot
 git clone https://www.github.com/Maoyeedy/UnityProjectSetupScripts.git .setup
-rm -r -fo SetupScripts/.git
+rm -r -fo .setup/.git
 ```
 
 Or add as submodule:
