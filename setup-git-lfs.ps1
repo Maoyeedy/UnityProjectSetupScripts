@@ -1,3 +1,7 @@
+if (-not (Get-Command -Name 'Get-UnityVersion' -ErrorAction SilentlyContinue)) {
+    . "$PSScriptRoot\functions.ps1"
+}
+
 Write-Host "`nConfiguring Git LFS..." -ForegroundColor Yellow
 try {
     git lfs install

@@ -1,3 +1,7 @@
+if (-not (Get-Command -Name 'Get-UnityVersion' -ErrorAction SilentlyContinue)) {
+    . "$PSScriptRoot\functions.ps1"
+}
+
 Write-Host "`nConfiguring Git submodules..." -ForegroundColor Yellow
 try{
     git config submodule.recurse true

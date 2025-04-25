@@ -1,3 +1,7 @@
+if (-not (Get-Command -Name 'Get-UnityVersion' -ErrorAction SilentlyContinue)) {
+    . "$PSScriptRoot\functions.ps1"
+}
+
 Assert-AdminPrivileges
 
 Write-Host "`nConfiguring MergeRules..." -ForegroundColor Yellow
