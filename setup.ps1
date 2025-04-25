@@ -8,6 +8,8 @@ Write-Host "`nStarting Unity project setup..." -ForegroundColor Cyan
 
 & "$PSScriptRoot\setup-unityyamlmerge.ps1"
 
+& "$PSScriptRoot\setup-merge-rules.ps1"
+
 & "$PSScriptRoot\setup-submodules.ps1"
 
 Write-Host "`nUnity project setup completed!" -ForegroundColor Cyan

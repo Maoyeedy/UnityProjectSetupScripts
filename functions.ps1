@@ -1,3 +1,12 @@
+function Assert-AdminPrivileges {
+    $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+    $isAdmin = $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+    if (-not $isAdmin) {
+        Write-Host "Please run the script with admin..." -ForegroundColor Yellow
+        exit
+    }
+}
+
 function Get-UnityVersion {
     if (!(Test-Path ProjectSettings/ProjectVersion.txt)) {
         Write-Error "ProjectSettings/ProjectVersion.txt not found"

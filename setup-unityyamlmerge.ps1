@@ -1,5 +1,3 @@
-. "$PSScriptRoot\functions.ps1"
-
 Write-Host "`nConfiguring UnityYAMLMerge..." -ForegroundColor Yellow
 try {
     $yamlMergePath = Get-UnityYAMLMergePath
