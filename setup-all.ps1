@@ -12,10 +12,10 @@ Write-Host $PWD
 
 & "$PSScriptRoot\setup-git-options.ps1"
 
+& "$PSScriptRoot\setup-submodules.ps1"
+
 & "$PSScriptRoot\setup-unityyamlmerge.ps1"
 
 & "$PSScriptRoot\setup-merge-rules.ps1"
-
-& "$PSScriptRoot\setup-submodules.ps1"
 
 Write-Host "`nProject setup completed!" -ForegroundColor Cyan
