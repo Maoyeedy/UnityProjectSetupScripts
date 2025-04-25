@@ -4,6 +4,10 @@ Make Unity Projects work better with Git.
 
 Currently for Windows only.
 
+<!-- add screenshot.png -->
+
+![Screenshot](./ScreenshotAlt.png)
+
 ## What it does
 
 - `unityyamlmerge` mergetool added to `.git/config`, to be used with `.gitattributes`
@@ -52,6 +56,7 @@ powershell -nop .\UnityProjectSetupScripts\setup-unityyamlmerge.ps1
 - Unity and Git need to be installed, of course.
 
 ## TODO
+- [ ] Add `--verbose` argument.
 - [ ] Make `Setup.bat` has interactive 'which scripts to run' toggles.
 - [ ] Make it work with Linux and MacOS
 - [ ] Make it able to run with `irm | iex`
