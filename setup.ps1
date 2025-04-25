@@ -1,10 +1,4 @@
-try {
-    . "$PSScriptRoot\functions.ps1"
-}
-catch {
-    Write-Error "Failed to import $PSScriptRoot\functions.ps1."
-    exit 1
-}
+. "$PSScriptRoot\functions.ps1"
 
 Write-Host "`nStarting Unity project setup..." -ForegroundColor Cyan
 
