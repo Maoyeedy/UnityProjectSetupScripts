@@ -22,18 +22,18 @@ Download as zip, and extract to Unity project root.
 Or clone the repository:
 ```powershell
 cd $UnityProjectRoot
-git clone https://www.github.com/Maoyeedy/UnityProjectSetupScripts.git
+git clone https://www.github.com/Maoyeedy/UnityProjectSetupScripts.git .setup
 rm -r -fo SetupScripts/.git
 ```
 
 Or add as submodule:
 ```powershell
-git submodule add https://www.github.com/Maoyeedy/UnityProjectSetupScripts.git
+git submodule add https://www.github.com/Maoyeedy/UnityProjectSetupScripts.git .setup
 ```
 
 Or use degit:
 ```powershell
-degit Maoyeedy/UnityProjectSetupScripts
+degit Maoyeedy/UnityProjectSetupScripts .setup
 ```
 
 ## Usage
@@ -44,10 +44,10 @@ Double-click `Setup.bat` - it'll launch powershell with admin rights and run eve
 ### Manually
 ```powershell
 # Run as admin
-powershell -nop .\UnityProjectSetupScripts\setup-all.ps1
+powershell -nop .\.setup\setup-all.ps1
 
 # Run each script separately
-powershell -nop .\UnityProjectSetupScripts\setup-unityyamlmerge.ps1
+powershell -nop .\.setup\setup-unityyamlmerge.ps1
 ```
 
 ## Troubleshooting
