@@ -41,9 +41,7 @@ function Get-UnityEditorPath {
     # If using default path, then $userPath will be empty string
     $userPath = (Get-Content $userPathFile -Raw).Trim('"')
 
-    # If userPath directory is set but deleted.
-    # Unity Hub will recreate directory upon next Editor installation.
-    if ((Test-Path $userPath)) {
+    if ($userPath -and (Test-Path $userPath)) {
         return $userPath
     }
 
@@ -88,7 +86,7 @@ function Get-UnityYAMLMergePath {
         return $null
     }
 
-    # $yamlMergePath = Join-Path $editorPath "Editor\Data\Tools\UnityYAMLMerge.exe"
+    $yamlMergePath = Join-Path $editorPath "Editor\Data\Tools\UnityYAMLMerge.exe"
     if (Test-Path $yamlMergePath) {
         return $yamlMergePath
     }
