@@ -1,6 +1,11 @@
+if (Test-Path -Path ".\setup.bat") {
+    Set-Location ..
+}
+
 . "$PSScriptRoot\functions.ps1"
 
-Write-Host "`nStarting Unity project setup..." -ForegroundColor Cyan
+Write-Host "`nStarting Project setup for:" -ForegroundColor Cyan
+Write-Host $PWD
 
 & "$PSScriptRoot\setup-git-lfs.ps1"
 
@@ -12,4 +17,4 @@ Write-Host "`nStarting Unity project setup..." -ForegroundColor Cyan
 
 & "$PSScriptRoot\setup-submodules.ps1"
 
-Write-Host "`nUnity project setup completed!" -ForegroundColor Cyan
+Write-Host "`nProject setup completed!" -ForegroundColor Cyan
