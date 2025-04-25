@@ -4,7 +4,8 @@ function Assert-AdminPrivileges {
     if (-not $isAdmin) {
         Write-Host "`nConfiguring MergeRules requires admin privileges." -ForegroundColor Red
         # Write-Host "`e[3mExample: Start-Process powershell.exe -Verb RunAs`e[23m" -ForegroundColor DarkGray
-        Write-BoxedCode "Start-Process powershell.exe -Verb RunAs"
+        # Write-BoxedCode "Start-Process powershell.exe -Verb RunAs"
+        Write-BoxedCode "Start-Process powershell -Verb RunAs -Args `"-noe -nop -c cd '`$PWD'`""
         exit
     }
 }
