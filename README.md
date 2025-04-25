@@ -6,7 +6,7 @@ Currently for Windows only.
 
 <!-- add screenshot.png -->
 
-![Screenshot](./ScreenshotAlt.png)
+![Screenshot](Public/ScreenshotAlt.png)
 
 ## What it does
 
