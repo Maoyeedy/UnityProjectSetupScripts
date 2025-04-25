@@ -5,9 +5,9 @@ try {
         throw "Could not find UnityYAMLMerge.exe"
     }
 
-    $cmd = "`"" + $yamlMergePath + "`" merge -p `"`$BASE`" `"`$REMOTE`" `"`$LOCAL`" `"`$MERGED`""
+    $cmd = "& '$yamlMergePath' merge -p `"`$BASE`" `"`$REMOTE`" `"`$LOCAL`" `"`$MERGED`""
     Write-Host "$cmd" -ForegroundColor DarkGray
-    git config mergetool.unityyamlmerge.cmd '$cmd'
+    git config mergetool.unityyamlmerge.cmd $cmd
     git config mergetool.unityyamlmerge.trustExitCode false
 
     Write-Host "Configured Successfully." -ForegroundColor Green
