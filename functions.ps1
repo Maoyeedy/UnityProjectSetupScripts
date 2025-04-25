@@ -7,6 +7,22 @@ function Assert-AdminPrivileges {
     }
 }
 
+function Write-BoxedCode {
+    param([string]$Code)
+
+    # Split by various newline characters and remove empty lines
+    $lines = $Code -split "`r`n|`n|`r" | Where-Object { $_ -ne "" }
+    $maxLength = ($lines | Measure-Object -Property Length -Maximum).Maximum
+    $line = "─" * ($maxLength + 2)
+
+    Write-Host "┌$line┐"
+    foreach ($codeLine in $lines) {
+        $padding = " " * ($maxLength - $codeLine.Length)
+        Write-Host "│ $codeLine$padding │"
+    }
+    Write-Host "└$line┘"
+}
+
 function Get-UnityVersion {
     if (!(Test-Path ProjectSettings/ProjectVersion.txt)) {
         Write-Error "ProjectSettings/ProjectVersion.txt not found"
@@ -72,7 +88,7 @@ function Get-UnityYAMLMergePath {
         return $null
     }
 
-    $yamlMergePath = Join-Path $editorPath "Editor\Data\Tools\UnityYAMLMerge.exe"
+    # $yamlMergePath = Join-Path $editorPath "Editor\Data\Tools\UnityYAMLMerge.exe"
     if (Test-Path $yamlMergePath) {
         return $yamlMergePath
     }
