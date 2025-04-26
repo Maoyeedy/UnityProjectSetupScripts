@@ -58,6 +58,7 @@ powershell -NoProfile ./.setup/Scripts/setup-unityyamlmerge.ps1
 
 ## TODO
 - [ ] Add `--verbose` argument.
+- [ ] Add more null/return checks.
 - [ ] Make `Setup.bat` has interactive 'which scripts to run' toggles.
 - [ ] Make it work with Linux and MacOS
 - [ ] Make it able to run with `irm | iex`

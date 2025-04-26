@@ -3,7 +3,6 @@ if (Test-Path -Path ".\Setup.bat") {
     Set-Location "$PSScriptRoot\..\.."
 }
 
-
 . "$PSScriptRoot\functions.ps1"
 
 Write-Host "`nStarting Project setup for:" -ForegroundColor Cyan
