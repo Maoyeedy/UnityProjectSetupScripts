@@ -9,10 +9,11 @@ Make Unity Projects work better with Git.
 
 ## What they do
 
-- Add `unityyamlmerge` mergetool added to `.git/config`, to be used with `.gitattributes`
+- Add mergetool `unityyamlmerge` to `.git/config` (to be used with `.gitattributes`)
 - Add [mergerules](Scripts/mergerules.txt) to make `unityyamlmerge` ignore negligible differences. [(Source)](https://docs.unity3d.com/Manual/SmartMerge.html)
 - Make `git pull` uses rebase (for cleaner history when pulling from origin)
-- Make submodules also get fetched when you execute `git pull/fetch`
+- Auto-Update submodules contents after `git pull/merge`
+<!-- - ~~Make submodules also get fetched when you execute `git pull/fetch`~~ -->
 
 (Details can be found in each `.ps1` scripts, you may also modify them to your liking.)
 
