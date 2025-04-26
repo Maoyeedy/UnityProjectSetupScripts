@@ -4,8 +4,8 @@ Make Unity Projects work better with Git.
 
 Currently for Windows only.
 
-<!-- ![Screenshot](Public/carbon.png) -->
-![Screenshot](Public/ScreenshotAlt.png)
+![Screenshot](Public/carbon.png)
+<!-- ![Screenshot](Public/ScreenshotAlt.png) -->
 
 ## What they do
 
