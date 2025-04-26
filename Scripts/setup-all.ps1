@@ -1,6 +1,6 @@
 if (Test-Path -Path ".\Setup.bat") {
-    Set-Location ..
-    # Ensure following scripts executes at Project root
+    # Ensure following scripts execute at project root
+    Set-Location (Split-Path -Parent $PSScriptRoot)
 }
 
 . "$PSScriptRoot\functions.ps1"

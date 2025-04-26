@@ -10,7 +10,7 @@ Currently for Windows only.
 ## What they do
 
 - Add `unityyamlmerge` mergetool added to `.git/config`, to be used with `.gitattributes`
-- Add [mergerules](mergerules.txt) to make `unityyamlmerge` ignore negligible differences. [(Source)](https://docs.unity3d.com/Manual/SmartMerge.html)
+- Add [mergerules](Scripts/mergerules.txt) to make `unityyamlmerge` ignore negligible differences. [(Source)](https://docs.unity3d.com/Manual/SmartMerge.html)
 - Make `git pull` uses rebase (for cleaner history when pulling from origin)
 - Make submodules also get fetched when you execute `git pull/fetch`
 
@@ -44,11 +44,11 @@ Double-click `Setup.bat` - it'll launch powershell with admin rights and run eve
 
 ### Manually
 ```powershell
-# Run as admin
-powershell -nop .\.setup\setup-all.ps1
+# Launch new admin powershell with this
+& ./.setup/Setup.bat
 
 # Run each script separately
-powershell -nop .\.setup\setup-unityyamlmerge.ps1
+powershell -NoProfile ./.setup/Scripts/setup-unityyamlmerge.ps1
 ```
 
 ## Troubleshooting
