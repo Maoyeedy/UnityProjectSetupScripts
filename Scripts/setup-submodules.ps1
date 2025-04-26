@@ -10,9 +10,9 @@ try{
 
     $postMergeHookPath = ".git/hooks/post-merge"
     $lineToAdd = @"
-echo 'Updating Submodules...'
+echo -e '\033[1;33mUpdating Submodules...\033[0m'
 git submodule update --init --recursive --remote
-echo 'Update Complete'
+echo -e '\033[1;32mUpdate Complete\033[0m'
 "@
 
     if (Test-Path $postMergeHookPath) {
