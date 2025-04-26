@@ -61,4 +61,3 @@ powershell -nop .\.setup\setup-unityyamlmerge.ps1
 - [ ] Make `Setup.bat` has interactive 'which scripts to run' toggles.
 - [ ] Make it work with Linux and MacOS
 - [ ] Make it able to run with `irm | iex`
-- [ ] Write a JS/TS version so that it can be run with `npx`.
