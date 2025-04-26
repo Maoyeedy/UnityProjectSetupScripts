@@ -1,6 +1,6 @@
 # Unity Project Setup Scripts
 
-Make Unity Projects work better with Git.
+Make Unity Projects work better with VCS.
 
 <!-- ![Screenshot](Public/carbon-dark.png) -->
 ![Screenshot](Public/carbon-light.png)
