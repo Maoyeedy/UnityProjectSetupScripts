@@ -11,8 +11,8 @@ Make Unity Projects work better with VCS.
 
 - Add [mergetool](Scripts/setup-unityyamlmerge.ps1) `unityyamlmerge` to `.git/config` (to be used with `.gitattributes`)
 - Add [mergerules](Scripts/mergerules.txt) to make `unityyamlmerge` ignore negligible differences. [(Source)](https://docs.unity3d.com/Manual/SmartMerge.html)
-- Make `git pull` uses rebase (for cleaner history when pulling from origin)
-- Auto-Update submodules contents after `git pull/merge`
+- Force `git pull` to use rebase (for cleaner commit history)
+- Auto-Update submodules after `git pull/merge`
 <!-- - ~~Make submodules also get fetched when you execute `git pull/fetch`~~ -->
 
 (Details can be found in each `.ps1` scripts, you may also modify them to your liking.)
