@@ -15,7 +15,7 @@ Make Unity Projects work better with VCS.
 - Auto-Update submodules after `git pull/merge`
 <!-- - ~~Make submodules also get fetched when you execute `git pull/fetch`~~ -->
 
-(Details can be found in each `.ps1` scripts, you may also modify them to your liking.)
+(Details can be found in each `Scripts/*.ps1`, you may modify them to your liking.)
 
 ## Installation
 
