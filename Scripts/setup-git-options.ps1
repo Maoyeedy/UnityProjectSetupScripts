@@ -10,8 +10,6 @@ try {
     Write-Host "core.safecrlf set to false" -ForegroundColor DarkGray
     git config core.longpaths true
     Write-Host "core.longpaths set to true" -ForegroundColor DarkGray
-    git config pull.rebase true
-    Write-Host "pull.rebase set to true" -ForegroundColor DarkGray
 
     Write-Host "Configured Successfully." -ForegroundColor Green
 }
