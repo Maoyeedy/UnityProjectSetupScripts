@@ -54,6 +54,7 @@ powershell -NoProfile ./.setup/Scripts/setup-unityyamlmerge.ps1
 
 ## Troubleshooting
 
+- Run `powershell -Command "Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force"` if script can't execute.
 - Unity Hub should be installed, as I use `$env:APPDATA\UnityHub\secondaryInstallPath.json` to retrieve installation paths.
 - Unity and Git need to be installed, of course.
 
